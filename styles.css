@@ -107,18 +107,28 @@ header h1 {
   border-radius: 10px;
 }
 
+.project-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+.project-item:hover {
+  transform: scale(1.05); /* Slightly increase the size of the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
 .project-item a {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
   text-align: center;  /* Center text inside the flex container */
-  transition: color 0.3s;
 }
 
-.project-item a:hover{
-  color: #7d7d7d;
+.project-item img {
+  width: 100%; /* Make the image responsive */
+  max-width: 150px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
 }
-
 
 .project-item a h2 {
   margin: 10px 0 0 0; /* Adjust margin as needed */
@@ -143,6 +153,16 @@ header h1 {
   display: flex;
   justify-content: center; /* Center the logo horizontally within the container */
   align-items: center;     /* Center the logo vertically within the container */
+  width: 150px;            /* Set the width of the circle */
+  height: 150px;           /* Set the height of the circle */
+  background-color: white; /* Set the background color to white */
+  border-radius: 50%;      /* Make the container a circle */
+  overflow: hidden;        /* Ensure the image does not overflow the circle */
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.logo-container:hover {
+  transform: scale(1.2); /* Increase the size of the circle on hover */
 }
 
 .logo {
@@ -197,7 +217,7 @@ p {
 
 /* Colors */
 body {
-  background-color: #f6f6f0;
+  background-color: #f3f3f2;
   color: #333;
 }
 
